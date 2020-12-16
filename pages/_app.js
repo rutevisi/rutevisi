@@ -1,5 +1,5 @@
 import React from 'react';
-import '../public/css/style.scss'
+import '../styles/style.scss'
 import GlobalStyles from '../components/styles/GlobalStyles'
 import { wrapper } from '../redux/store';
 import NextNProgress from '../components/NextNProgress'
