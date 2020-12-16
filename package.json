@@ -1,0 +1,31 @@
+{
+  "name": "rutevisi",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.1.2",
+    "@emotion/styled": "^11.0.0",
+    "argon2": "^0.27.1",
+    "axios": "^0.21.0",
+    "firebase": "^8.2.0",
+    "formik": "^2.2.6",
+    "mongoose": "^5.11.8",
+    "next": "10.0.3",
+    "next-redux-wrapper": "^6.0.2",
+    "react": "17.0.1",
+    "react-countdown": "^2.3.1",
+    "react-dom": "17.0.1",
+    "react-hook-form": "^6.13.1",
+    "react-icons": "^4.1.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.30.0",
+    "shuffle-array": "^1.0.1"
+  }
+}
