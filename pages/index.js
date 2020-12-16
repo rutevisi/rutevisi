@@ -1,65 +1,81 @@
+import React, { useState } from 'react'
+import Styled from '@emotion/styled'
+import LayoutFull from '../components/layouts/LayoutFull'
+import Tools from '../components/Tools'
+import KodeKelasBox from '../components/KodeKelasBox'
+import ForHRD from '../components/ForHRD'
+import Jumbotron from '../components/Jumbotron'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+function Index({tests}){
+    const [ keyword, setKeyword ] = useState();
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    return(
+        <StyledIndex>
+            <Head>
+                <title>Rutevisi.com - Pelajari Karakteristikmu Lebih Dalam</title>
+            </Head>
+            <div>
+                <LayoutFull>
+                    <Jumbotron />
+                    <div className="index-maincontent">
+                      
+                        <div className="etalase-tool">
+                            <Tools setKeyword={setKeyword}/>
+                        </div>
+                        <div className="maincontent-side">
+                            <Link href="/bantuan">
+                                <button className="btn-filter btn-tools">
+                                    <p>Bantuan</p>
+                                    <img src='/img/tools/bantuan.svg' alt="" className="img-filter"/>
+                                </button>
+                            </Link>
+                            <KodeKelasBox />
+                            <ForHRD />
+                        </div>
+                    </div>
+                </LayoutFull>   
+            </div>
+        </StyledIndex>
+    )
 }
+
+const StyledIndex = Styled.div` 
+.index-maincontent{
+    padding: 12px 48px 0 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 600px;
+}
+.maincontent-side{
+    width: 294px;
+}
+.btn-bantuan{
+    width: 92px;
+    height: 40px;
+    border: solid 0.5px white;
+}
+.btn-tools{
+    font-family:'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #969696;
+    
+    height: 40px;
+    border: none;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+}
+.btn-tools img{
+    margin-left: 10px;
+}
+`
+
+export default Index;
