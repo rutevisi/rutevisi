@@ -10,7 +10,7 @@ import Link from 'next/link'
 import axios from 'axios'
 import Etalase from '../components/Etalase'
 
-function Index({tests}){
+function Index(){
     const [listUjian, setListUjian] = useState();
     const [ keyword, setKeyword ] = useState();
 
@@ -34,7 +34,7 @@ function Index({tests}){
                       
                         <div className="etalase-tool">
                             <Tools setKeyword={setKeyword}/>
-                            <Etalase testlist={listUjian} keyword={keyword}/>
+                            { listUjian ? <Etalase testlist={listUjian} keyword={keyword}/> : '' }
                         </div>
                         <div className="maincontent-side">
                             <Link href="/bantuan">
