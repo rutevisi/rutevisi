@@ -101,7 +101,7 @@ const Etalase = ({testlist, sort, keyword, filter}) => {
                 <div className="etalase-items">
                     {filtering(filter).filter((obj) => obj.seotitle.includes(keyword ? keyword : '')).slice(0,load).map((tes, index) =>
                     {
-                        if(tes.available){
+                        if(tes?.available){
                             return (
                                 <Link href={`../tes/${tes.slug}`} key={tes._id}>
                                     <a>
@@ -131,66 +131,66 @@ const Etalase = ({testlist, sort, keyword, filter}) => {
 }
 
 const StyledEtalase = Styled.div`
-.etalase-items{
-    margin-top: 22px;
-    width: 553.5px;
+    .etalase-items{
+        margin-top: 22px;
+        width: 553.5px;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-.btnloader{
-    width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .btnloader{
+        width: 100%;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.muatlebih{
-    width: 268px;
-    height: 44px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .muatlebih{
+        width: 268px;
+        height: 44px;
 
-    background: #F7F7F7;
-    box-shadow: 8px 8px 10px rgba(174, 174, 192, 0.38), -8px -8px 6px #FFFFFF, inset 1px 1px 0px rgba(0, 0, 0, 0.11);
-    border-radius: 6px;
+        background: #F7F7F7;
+        box-shadow: 8px 8px 10px rgba(174, 174, 192, 0.38), -8px -8px 6px #FFFFFF, inset 1px 1px 0px rgba(0, 0, 0, 0.11);
+        border-radius: 6px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-}
-.p-muatlebih{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+    .p-muatlebih{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
 
-    color: #909090;
-}
-.lildown{
-    font-size: 24px;
-    position: relative;
-    top: 3px;
-}
-.masihada{
-    height: 44px;
-    width: 268px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 24px;
-}
-.p-masihada{
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 22px;
-    
-    color: #909090;
-}
+        color: #909090;
+    }
+    .lildown{
+        font-size: 24px;
+        position: relative;
+        top: 3px;
+    }
+    .masihada{
+        height: 44px;
+        width: 268px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 24px;
+    }
+    .p-masihada{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 22px;
+        
+        color: #909090;
+    }
 `
 
 const mapStateToProps = (state) => ({

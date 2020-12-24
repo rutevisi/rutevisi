@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Styled from '@emotion/styled'
 import LayoutFull from '../components/layouts/LayoutFull'
 import Tools from '../components/Tools'
@@ -7,9 +7,20 @@ import ForHRD from '../components/ForHRD'
 import Jumbotron from '../components/Jumbotron'
 import Head from 'next/head'
 import Link from 'next/link'
+import axios from 'axios'
+import Etalase from '../components/Etalase'
 
 function Index({tests}){
+    const [listUjian, setListUjian] = useState();
     const [ keyword, setKeyword ] = useState();
+
+    useEffect(() => {
+        axios.get('/api/tes').then(res => {
+            if(res.data){
+                setListUjian(res.data)
+            }
+        }).catch(err => console.log(err))
+    }, [])
 
     return(
         <StyledIndex>
@@ -23,6 +34,7 @@ function Index({tests}){
                       
                         <div className="etalase-tool">
                             <Tools setKeyword={setKeyword}/>
+                            <Etalase testlist={listUjian} keyword={keyword}/>
                         </div>
                         <div className="maincontent-side">
                             <Link href="/bantuan">
