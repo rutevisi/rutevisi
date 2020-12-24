@@ -9,8 +9,9 @@ const resultSchema = new mongoose.Schema({
 });
 
 function modelAreadyDeclared() {
-  try {
-        module.exports = mongoose.model('resultSchema')
+    try {
+        const UserResult = mongoose.model('UserResult')
+        module.exports = UserResult
         return true
     } catch (e) {
         return false
@@ -18,5 +19,6 @@ function modelAreadyDeclared() {
 }
 
 if (!modelAreadyDeclared()) {
-    module.exports = resultSchema;
+    const UserResult = mongoose.model('UserResult', resultSchema);
+    module.exports = UserResult;
 }
