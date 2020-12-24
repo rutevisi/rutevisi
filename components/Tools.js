@@ -84,96 +84,97 @@ const Tools = ({sortByNew, sortByPopular, setKeyword, filterByFun, filterByKarir
 }
 
 const StyledFilter = Styled.ul`
-position:absolute;
-background: #fff;
-list-style: none;
-padding: .75rem;
-box-shadow: 0 4px 8px #00000038;
-z-index: 20;
-border-radius: 4px;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-top:33px;
-left:0;
-color: #969696;
-
-&:hover{
-    color:#969696;
-}
-
-li{
-    padding: .5rem 1rem;
-
-    &:hover{
-        color:#444;
-    }
-}
-`
-
-const StyledTools = Styled.div`
-.icontul{
-    margin-left:0;
-}
-.tools{
-    width: 522px;
-    height: 40px;
+    position:absolute;
+    background: #fff;
+    list-style: none;
+    padding: .75rem;
+    box-shadow: 0 4px 8px #00000038;
+    z-index: 20;
+    border-radius: 4px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.utility{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-.btn-tools{
-    font-family:'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    top:33px;
+    left:0;
     color: #969696;
-    position:relative;
-    padding: .3rem .75rem;
-    border-radius: 8px;
-    
-    height: 40px;
-    border: none;
-    background-color: inherit;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-right: 12px;
 
     &:hover{
-        color: #444;
-        background:#eee;
+        color:#969696;
+    }
+
+    li{
+        padding: .5rem 1rem;
+
+        &:hover{
+            color:#444;
+        }
+    }
+    `
+
+    const StyledTools = Styled.div`
+    .icontul{
+        margin-left:0;
+    }
+    .tools{
+        width:100%;
+        max-width: 522px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .utility{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .btn-tools{
+        font-family:'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #969696;
+        position:relative;
+        padding: .3rem .75rem;
+        border-radius: 8px;
+        
+        height: 40px;
+        border: none;
+        background-color: inherit;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 12px;
+
+        &:hover{
+            color: #444;
+            background:#eee;
+
+            img{
+                filter: grayscale(1) brightness(0.4);
+            }
+        }
 
         img{
-            filter: grayscale(1) brightness(0.4);
+            margin: 0;
+            margin-right: 10px;
+            filter: grayscale(1) brightness(0.8);
         }
     }
 
-    img{
-        margin: 0;
-        margin-right: 10px;
-        filter: grayscale(1) brightness(0.8);
-    }
-}
+    .isopen{
+        background:#eee;
+        color:#444;
 
-.isopen{
-    background:#eee;
-    color:#444;
-
-    img{
-        filter: grayscale(1) brightness(0.4) !important;
+        img{
+            filter: grayscale(1) brightness(0.4) !important;
+        }
+        &:hover{
+            color:#444 !important;
+        }
     }
-    &:hover{
-        color:#444 !important;
-    }
-}
 `
 
 const mapDispatchToProps = (dispatch) => {

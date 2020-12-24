@@ -48,14 +48,30 @@ function Index(){
 
 const StyledIndex = Styled.div` 
 .index-maincontent{
-    padding: 12px 48px 0 48px;
+    padding: 12px 16px 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     min-height: 600px;
+    width:100%;
+
+    @media(min-width:800px){
+        padding: 12px 48px 0 48px;
+    }
+}
+.etalase-tool{
+    width:100%;
 }
 .maincontent-side{
-    width: 294px;
+    max-width: 294px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: auto;
+
+    @media(min-width:800px){
+        margin-right: unset;
+    }
 }
 .btn-bantuan{
     width: 92px;

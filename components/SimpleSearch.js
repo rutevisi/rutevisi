@@ -19,6 +19,11 @@ const StyledSimpleSearch = Styled.div`
     width: 162px;
     border-bottom: 1.5px solid #DDDDDD;
     margin-top: 4px;
+    display:none;
+
+    @media(min-width:800px){
+        display:block;
+    }
 }
 .form-search{
     display: flex;

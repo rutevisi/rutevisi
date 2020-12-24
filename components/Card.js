@@ -233,8 +233,11 @@ const Card = ({title, subtitle, seotitle, emojicon, cardColor, available, colorT
 }
 
 const CardStyled = Styled.div`
+    margin-right: 10.5px;
 
-margin-right: 31.5px;
+    @media(min-width:800px){
+        margin-right:31.5px;
+    }
     .ribbon {
         width: 150px;
         height: 150px;

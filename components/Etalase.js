@@ -132,19 +132,23 @@ const Etalase = ({testlist, sort, keyword, filter}) => {
 const StyledEtalase = Styled.div`
     .etalase-items{
         margin-top: 22px;
-        width: 553.5px;
+        max-width: 553.5px;
 
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
+        width: 100%;
     }
     .btnloader{
         width: 100%;
-
-        display: flex;
+        display: none;
         justify-content: flex-start;
         align-items: center;
+
+        @media(min-width:800px){
+            display:flex;
+        }
     }
     .muatlebih{
         width: 268px;

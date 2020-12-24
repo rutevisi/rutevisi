@@ -190,7 +190,11 @@ const NavbarStyled = Styled.div`
     align-items: center;
     max-width: 1000px;
     width:100%;
-    margin: 0 48px;
+    padding: 0 16px;
+
+    @media(min-width:800px){
+        padding: 0 48px;
+    }
 }
 .nav-toggler{
 }
