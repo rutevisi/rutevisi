@@ -12,7 +12,7 @@ const HeadPage = (props) => {
 const StyledHeadPage = Styled.div`
     width: 100%;
     height: 268px;
-    background-image: url($'/img/headpage.svg')});
+    background-image: url('/img/headpage.svg'));
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
