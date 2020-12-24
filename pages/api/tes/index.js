@@ -1,10 +1,10 @@
 const Ujian = require('../../../models/ujianModel')
 const dbConnect = require('../../../utils/dbConnect')
 
-dbConnect()
-
 export default async function(req, res){
     const { method } = req;
+
+    dbConnect()
 
     switch(method){
         case "GET":
