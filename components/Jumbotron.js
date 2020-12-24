@@ -55,7 +55,7 @@ const StyledJumbotron = Styled.div`
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 41px;
+        font-size: 2.25rem;
         line-height: 50px;
 
         margin: 0;
@@ -63,6 +63,10 @@ const StyledJumbotron = Styled.div`
         width: 450px;
 
         color: #333333;
+
+        @media(min-width:800px){
+            font-size: 41px;
+        }
     }
     .p-mulai{
         padding-right: 48px;

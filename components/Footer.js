@@ -204,9 +204,16 @@ const FooterStyled = Styled.div`
             display:none
         }
 
+        a{
+            margin: 0 auto;
+        }
+
         @media(min-width:800px){
             p{
                 display:unset
+            }
+            a{
+                margin: unset;
             }
         }
     }

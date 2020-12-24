@@ -132,10 +132,8 @@ const Etalase = ({testlist, sort, keyword, filter}) => {
 const StyledEtalase = Styled.div`
     .etalase-items{
         margin-top: 22px;
-        max-width: 553.5px;
-
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: flex-start;
         flex-wrap: wrap;
         width: 100%;

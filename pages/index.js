@@ -47,56 +47,60 @@ function Index(){
 }
 
 const StyledIndex = Styled.div` 
-.index-maincontent{
-    padding: 12px 16px 0 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    min-height: 600px;
-    width:100%;
+    .index-maincontent{
+        padding: 12px 16px 0 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 600px;
+        width:100%;
 
-    @media(min-width:800px){
-        padding: 12px 48px 0 48px;
+        @media(min-width:800px){
+            padding: 12px 48px 0 48px;
+        }
     }
-}
-.etalase-tool{
-    width:100%;
-}
-.maincontent-side{
-    max-width: 294px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-right: auto;
+    .etalase-tool{
+        width:100%;
 
-    @media(min-width:800px){
-        margin-right: unset;
+        @media(min-width:800px){
+            width:62%;
+        }
     }
-}
-.btn-bantuan{
-    width: 92px;
-    height: 40px;
-    border: solid 0.5px white;
-}
-.btn-tools{
-    font-family:'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
-    color: #969696;
-    
-    height: 40px;
-    border: none;
-    background-color: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 12px;
-}
-.btn-tools img{
-    margin-left: 10px;
-}
+    .maincontent-side{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-right: auto;
+
+        @media(min-width:800px){
+            margin-right: unset;
+            width: 36%;
+        }
+    }
+    .btn-bantuan{
+        width: 92px;
+        height: 40px;
+        border: solid 0.5px white;
+    }
+    .btn-tools{
+        font-family:'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #969696;
+        
+        height: 40px;
+        border: none;
+        background-color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+    }
+    .btn-tools img{
+        margin-left: 10px;
+    }
 `
 
 export default Index;
