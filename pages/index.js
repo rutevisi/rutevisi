@@ -24,31 +24,25 @@ function Index(){
 
     return(
         <StyledIndex>
-            <Head>
-                <title>Rutevisi.com - Pelajari Karakteristikmu Lebih Dalam</title>
-            </Head>
-            <div>
-                <LayoutFull>
-                    <Jumbotron />
-                    <div className="index-maincontent">
-                      
-                        <div className="etalase-tool">
-                            <Tools setKeyword={setKeyword}/>
-                            { listUjian ? <Etalase testlist={listUjian} keyword={keyword}/> : '' }
-                        </div>
-                        <div className="maincontent-side">
-                            <Link href="/bantuan">
-                                <button className="btn-filter btn-tools">
-                                    <p>Bantuan</p>
-                                    <img src='/img/tools/bantuan.svg' alt="" className="img-filter"/>
-                                </button>
-                            </Link>
-                            <KodeKelasBox />
-                            <ForHRD />
-                        </div>
+            <LayoutFull title="Rutevisi.com - Pelajari Karakteristikmu Lebih Dalam">
+                <Jumbotron />
+                <div className="index-maincontent">     
+                    <div className="etalase-tool">
+                        <Tools setKeyword={setKeyword}/>
+                        { listUjian ? <Etalase testlist={listUjian} keyword={keyword}/> : '' }
                     </div>
-                </LayoutFull>   
-            </div>
+                    <div className="maincontent-side">
+                        <Link href="/bantuan">
+                            <button className="btn-filter btn-tools">
+                                <p>Bantuan</p>
+                                <img src='/img/tools/bantuan.svg' alt="" className="img-filter"/>
+                            </button>
+                        </Link>
+                        <KodeKelasBox />
+                        <ForHRD />
+                    </div>
+                </div>
+            </LayoutFull>   
         </StyledIndex>
     )
 }

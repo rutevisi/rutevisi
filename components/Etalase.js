@@ -6,9 +6,8 @@ import Link from 'next/link'
 import Card from './Card'
 
 const Etalase = ({testlist, sort, keyword, filter}) => {
-    const [load, setLoad] = useState(6);        
-    const tes = testlist;
-    const [sisates, setSisates] = useState(tes.length - 6);        
+    const [load, setLoad] = useState(6);
+    const [sisates, setSisates] = useState(testlist?.length - 6);        
 
     function sortByNew( a, b ) {
         if ( a.dateCreated < b.dateCreated ){
@@ -46,24 +45,24 @@ const Etalase = ({testlist, sort, keyword, filter}) => {
         return result;
     }
 
-    const sorted = testlist.sort(sorting(sort));
+    const sorted = testlist?.sort(sorting(sort));
 
     // Fitur filter
     function filtering(e){
         let result;
 
         if(e === 'FUN'){
-            result = sorted.filter(function (item){
+            result = sorted?.filter(function (item){
                 return item.categories.includes('Fun');
             })
         }
         else if(e === 'PSIKOLOGI'){
-            result = sorted.filter(function (item){
+            result = sorted?.filter(function (item){
                 return item.categories.includes('Psikologi');
             })
         }
         else if(e === 'KARIR_EDUKASI'){
-            result = sorted.filter(function (item){
+            result = sorted?.filter(function (item){
                 return item.categories.includes('Karir-Edukasi');
             })
         }

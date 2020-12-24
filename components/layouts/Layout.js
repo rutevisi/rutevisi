@@ -1,15 +1,11 @@
 import Navbar from '../Navbar'
 
-const Layout = (props)=> (
+const Layout = ({ children })=> (
     <div>
-        {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></link> */}
-
         <Navbar />
         <div className="clearance">
-            {props.children}
+            {children}
         </div>
-        {/* <img src='/img/protofooter.svg'alt="" className="footer-svg"/> */}
-
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -29,11 +25,5 @@ const Layout = (props)=> (
         `}</style>
     </div>
 )
-// .footer-svg{
-//     width: 100%;
-//     height: 100%;
-//     margin-top: 60px;
-//     position: relative;
-//     top: 4px;
-// }
+
 export default Layout;
