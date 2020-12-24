@@ -226,9 +226,9 @@ function ResultPage({result, testName, currentUser}){
             // Autosave record ke database untuk melacak jumlah tes yang dijalankan
             axios.post(`/api/tes/result`, resultData).then(res => {
                 const testid = res.data._id;
-                const storeData = { 
-                    testresult: storeResult, 
-                    testname: storeTestName, 
+                const storeData = {
+                    testresult: storeResult,
+                    testname: storeTestName,
                     testlink: `tes/mbti/result/${testid}` 
                 };
 

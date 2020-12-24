@@ -3,13 +3,12 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { testEnd } from '../../redux/actions/testAction'
 import Link from 'next/link'
-import { mbtiCalc } from './Kalkulasi/mbti'
-import { fakboiCalc } from './Kalkulasi/fakboi'
+import { mbtiCalc } from '../../utils/kalkulasi/mbti'
+import { fakboiCalc } from '../../utils/kalkulasi/fakboi'
 
 function FinishScreen({hasil, testEnd, testName}){
 
     const terjawab = hasil.answered
-    console.log(testName)
     let resultSend;
     let linker;
     // Cek Nama Tes
@@ -17,7 +16,8 @@ function FinishScreen({hasil, testEnd, testName}){
         // Perhitungan tes MBTI
         case 'Myers–Briggs Type Indicator':
             resultSend = mbtiCalc(hasil, testEnd, testName, terjawab, resultSend)
-            console.log(resultSend)
+            console.log(hasil)
+            console.log(terjawab)
             linker = "mbti";
             break;
 

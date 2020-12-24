@@ -74,7 +74,6 @@ const StyledKodeKelasBox = Styled.div`
     width: 176px;
     height: 40px;
     margin-left: 24px;
-
     padding-left: 16px;
     
     background: #FFFFFF;
@@ -96,10 +95,9 @@ const StyledKodeKelasBox = Styled.div`
     font-style: italic;
     font-weight: 600;
     font-size: 11px;
-    line-height: 13px;
     text-transform: capitalize;
-
     color: #969696;
+    padding-top:1rem !important;
 }
 `
 
